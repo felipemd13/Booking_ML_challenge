@@ -27,6 +27,9 @@ def plot_graph(x_series, y_series, title, x_label, y_label, legend, limit_x=None
             plt.plot(x_series[i], y_series[i])
         elif type == 'log':
             plt.loglog(x_series[i], y_series[i])
+        elif type == 'barlog':
+            plt.bar(x_series[i], y_series[i])
+            plt.yscale('log')
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.title(title)
